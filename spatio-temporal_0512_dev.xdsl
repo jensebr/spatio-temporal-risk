@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Ruggedness">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Slope">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Altitude_setpoint">
+			<state id="Close" />
+			<state id="Moderate" />
+			<state id="Far" />
+			<probabilities>0.7 0.2 0.1</probabilities>
+		</cpt>
+		<cpt id="BPI">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Fishing_area">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<noisymax id="Bathymetry_complexity">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Ruggedness BPI Fishing_area Slope</parents>
+			<strengths>0 1 2 0 1 2 0 1 2 0 1 2</strengths>
+			<parameters>0.6 0.3 0.1 0.2 0.6000000000000001 0.2 0 0 1 0.6 0.3 0.1 0.2 0.6000000000000001 0.2 0 0 1 0.09999999999999998 0.2999999999999999 0.6 0.01000000000000001 0.08999999999999997 0.9 0 0 1 1 0 0 0.35 0.6 0.05 0 0 1 0 0 1</parameters>
+		</noisymax>
+		<cpt id="Current">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Speed_setpoint">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Temperature">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="Copy_2_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="Copy_4_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="Distance_to_shore">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.0001 0.0009 0.9990000000000001</probabilities>
+		</cpt>
+		<cpt id="Distance_to_AUV">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Depth">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Vessel_type">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.1 0.3 0.6</probabilities>
+		</cpt>
+		<cpt id="Rain">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="River_mouth">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0 0 1</probabilities>
+		</cpt>
+		<cpt id="Wind_speed">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Salinity_of_water_column">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Rain River_mouth Wind_speed</parents>
+			<probabilities>0.6033333333333341 0.09 0.306666666666667 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.6033333333333341 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333331 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.333333333333333 0.63 0.0366666666666667 0.05 0.9 0.05 0.0366666666666667 0.63 0.333333333333333 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.6033333333333331 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333341 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.306666666666667 0.09 0.6033333333333341 0.0233333333333333 0.36 0.616666666666667 0.01 0.09 0.9 0.3332894442334171 0.3333693330950251 0.3333412226715574 0.3331397873045849 0.3334250557848522 0.3334351569105626</probabilities>
+		</cpt>
+		<noisymax id="Acoustic_modem">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Copy_4_of_Energy_system_integrity Depth Vessel_type Salinity_of_water_column Distance_to_AUV</parents>
+			<strengths>0 1 0 1 2 0 1 2 0 1 2 0 1 2</strengths>
+			<parameters>1 0 0 0 0 1 0.04999999999999993 0.15 0.8 0.02500000000000002 0.07499999999999996 0.9 0 0 1 0.04999999999999993 0.15 0.8 0.02500000000000002 0.07499999999999996 0.9 0 0 1 0.04999999999999993 0.15 0.8 0.02500000000000002 0.07499999999999996 0.9 0 0 1 1 0 0 0.25 0.5 0.25 0 0 1 0.06290905837064464 0.1317576095041528 0.8053333321252023</parameters>
+		</noisymax>
+		<cpt id="Navigation_performance">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Copy_2_of_Energy_system_integrity Current Acoustic_modem</parents>
+			<probabilities>0.9 0.09 0.01 0.475 0.495 0.03 0.455 0.09 0.455 0.475 0.495 0.03 0.05 0.9 0.05 0.03 0.495 0.475 0.455 0.09 0.455 0.03 0.495 0.475 0.01 0.09 0.9 0.9 0.09 0.01 0.475 0.495 0.03 0.455 0.09 0.455 0.475 0.495 0.03 0.05 0.9 0.05 0.03 0.495 0.475 0.455 0.09 0.455 0.03 0.495 0.475 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<cpt id="Waves">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Visibility">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Metocean_conditions">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Waves Wind_speed Rain Temperature Visibility</parents>
+			<probabilities>0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.9 0.09 0.01 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.6166666666666669 0.3599999999999999 0.0233333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.6033333333333335 0.08999999999999991 0.3066666666666667 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Mission_duration">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.1 0.3 0.6</probabilities>
+		</cpt>
+		<noisymax id="H6">
+			<state id="False" />
+			<state id="True" />
+			<parents>Speed_setpoint Current Mission_duration Salinity_of_water_column</parents>
+			<strengths>2 1 0 2 1 0 2 1 0 2 1 0</strengths>
+			<parameters>0.999 0.001 0.99 0.01 0 1 0.95 0.05000000000000004 0.92 0.07999999999999996 0 1 0.99999 9.99999999995449e-06 0.99 0.01000000000000001 0 1 0.92 0.07999999999999996 0.91 0.08999999999999997 0 1 0.9 0.1</parameters>
+		</noisymax>
+		<cpt id="Experience">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<noisymax id="H4">
+			<state id="False" />
+			<state id="True" />
+			<parents>Salinity_of_water_column Experience</parents>
+			<strengths>2 1 0 2 1 0</strengths>
+			<parameters>0.9999 0.0001 0.999 0.001 0 1 0.9999 0.0001 0.999 0.001 0 1 0.99 0.01</parameters>
+		</noisymax>
+		<cpt id="Motion_capabilities">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Copy_of_Energy_system_integrity</parents>
+			<probabilities>1 0 0 0.01 0.08999999999999997 0.9</probabilities>
+		</cpt>
+		<noisymax id="Loss_of_motion_performance">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Motion_capabilities Speed_setpoint Current Bathymetry_complexity</parents>
+			<strengths>0 1 2 0 1 2 0 1 2 0 1 2</strengths>
+			<parameters>0.7 0.25 0.05 0.15 0.7 0.15 0 0 1 0.7 0.25 0.05 0.15 0.7 0.15 0 0 1 0.7 0.25 0.05 0.15 0.7 0.15 0 0 1 0.7 0.25 0.05 0.15 0.7 0.15 0 0 1 0.001000000000000001 0.009000000000000008 0.99</parameters>
+		</noisymax>
+		<cpt id="Copy_5_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Navigation_performance">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Copy_5_of_Energy_system_integrity Bathymetry_complexity Fishing_area</parents>
+			<probabilities>0.9 0.09 0.01 0.475 0.495 0.03 0.455 0.09 0.455 0.475 0.495 0.03 0.05 0.9 0.05 0.03 0.495 0.475 0.455 0.09 0.455 0.03 0.495 0.475 0.01 0.09 0.9 0.9 0.09 0.01 0.475 0.495 0.03 0.455 0.09 0.455 0.475 0.495 0.03 0.05 0.9 0.05 0.03 0.495 0.475 0.455 0.09 0.455 0.03 0.495 0.475 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<noisymax id="H3">
+			<state id="False" />
+			<state id="True" />
+			<parents>Altitude_setpoint Loss_of_motion_performance Copy_of_Navigation_performance</parents>
+			<strengths>2 1 0 2 1 0 2 1 0</strengths>
+			<parameters>0.999 0.001 0.75 0.25 0 1 0.99 0.01 0.7 0.3 0 1 0.7 0.3 0.65 0.35 0 1 0.6 0.4</parameters>
+		</noisymax>
+		<cpt id="Copy_3_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="Copy_6_of_Energy_system_integrity">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<probabilities>1e-06 0.999999</probabilities>
+		</cpt>
+		<cpt id="H5">
+			<state id="Fault" />
+			<state id="NoFault" />
+			<parents>Copy_2_of_Energy_system_integrity Copy_of_Energy_system_integrity Copy_3_of_Energy_system_integrity Copy_4_of_Energy_system_integrity Copy_5_of_Energy_system_integrity Copy_6_of_Energy_system_integrity</parents>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="A4">
+			<state id="True" />
+			<state id="False" />
+			<parents>H6 H4 H5 H3</parents>
+			<probabilities>1 0 1 0 0 1 0.05 0.95 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</probabilities>
+		</cpt>
+		<noisymax id="H1">
+			<state id="False" />
+			<state id="True" />
+			<parents>Distance_to_shore Navigation_performance</parents>
+			<strengths>2 1 0 2 1 0</strengths>
+			<parameters>0.999 0.001 0.5 0.5 0 1 0.7 0.3 0.5 0.5 0 1 0.09999999999999998 0.9</parameters>
+		</noisymax>
+		<cpt id="A1">
+			<state id="True" />
+			<state id="False" />
+			<parents>H1</parents>
+			<probabilities>0 1 0.1 0.9</probabilities>
+		</cpt>
+		<noisymax id="Human_operator_performance">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Metocean_conditions Experience Mission_duration Acoustic_modem</parents>
+			<strengths>0 1 2 0 1 2 0 1 2 0 1 2</strengths>
+			<parameters>0.2 0.3 0.5 0.09999999999999998 0.2 0.7 0 0 1 0.5 0.4 0.1 0.2 0.5 0.3 0 0 1 0.09999999999999998 0.2 0.7 0.01000000000000001 0.08999999999999997 0.9 0 0 1 0.5 0.4 0.1 0.2 0.5 0.3 0 0 1 0.001000000000000001 0.009000000000000008 0.99</parameters>
+		</noisymax>
+		<cpt id="Recovery_effectiveness">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>Copy_6_of_Energy_system_integrity Human_operator_performance Vessel_type Distance_to_AUV</parents>
+			<probabilities>0.9 0.09 0.01 0.616666666666667 0.36 0.0233333333333333 0.6033333333333341 0.09 0.306666666666667 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.6033333333333341 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333331 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.333333333333333 0.63 0.0366666666666667 0.05 0.9 0.05 0.0366666666666667 0.63 0.333333333333333 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.6033333333333331 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333341 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.306666666666667 0.09 0.6033333333333341 0.0233333333333333 0.36 0.616666666666667 0.01 0.09 0.9 0.9 0.09 0.01 0.616666666666667 0.36 0.0233333333333333 0.6033333333333341 0.09 0.306666666666667 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.6033333333333341 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333331 0.616666666666667 0.36 0.0233333333333333 0.333333333333333 0.63 0.0366666666666667 0.32 0.36 0.32 0.333333333333333 0.63 0.0366666666666667 0.05 0.9 0.05 0.0366666666666667 0.63 0.333333333333333 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.6033333333333331 0.09 0.306666666666667 0.32 0.36 0.32 0.306666666666667 0.09 0.6033333333333341 0.32 0.36 0.32 0.0366666666666667 0.63 0.333333333333333 0.0233333333333333 0.36 0.616666666666667 0.306666666666667 0.09 0.6033333333333341 0.0233333333333333 0.36 0.616666666666667 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<noisymax id="C1">
+			<state id="Negligible" />
+			<state id="Marginal" />
+			<state id="Moderate" />
+			<state id="Critical" />
+			<state id="Catastrophic" />
+			<parents>A1 Metocean_conditions Recovery_effectiveness</parents>
+			<strengths>1 0 2 1 0 2 1 0</strengths>
+			<parameters>1 0 0 0 0 0 0 0 0 1 0 0.09499999999999997 0.15 0.75 0.005 0 0 0.07500000000000007 0.85 0.075 0 0 0 0 1 0 0 0.2495000000000001 0.75 0.0005 0 0 0.149 0.85 0.001 0 0 0 0 1 0.009999999999999898 0.03000000000000003 0.15 0.8 0.01</parameters>
+		</noisymax>
+		<utility id="Copy_of_Mean_loss_for_assets">
+			<parents>C1</parents>
+			<utilities>0 400 800 8000 3000000</utilities>
+		</utility>
+		<cpt id="Ship_traffic">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.1 0.2 0.7</probabilities>
+		</cpt>
+		<cpt id="Pop_up_frequency">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<parents>A4</parents>
+			<probabilities>1 0 0 0 0.1 0.9</probabilities>
+		</cpt>
+		<noisymax id="H2">
+			<state id="False" />
+			<state id="True" />
+			<parents>Ship_traffic Pop_up_frequency Visibility</parents>
+			<strengths>2 1 0 2 1 0 2 1 0</strengths>
+			<parameters>0.99 0.01 0.8 0.2 0 1 0.9 0.1 0.8 0.2 0 1 0.6999999999999997 0.3 0.6 0.4 0 1 0.5 0.5</parameters>
+		</noisymax>
+		<cpt id="A2">
+			<state id="True" />
+			<state id="False" />
+			<parents>H2</parents>
+			<probabilities>0 1 0.03 0.97</probabilities>
+		</cpt>
+		<noisymax id="C2">
+			<state id="Negligible" />
+			<state id="Marginal" />
+			<state id="Moderate" />
+			<state id="Critical" />
+			<state id="Catastrophic" />
+			<parents>A2 Recovery_effectiveness</parents>
+			<strengths>1 0 2 1 0</strengths>
+			<parameters>1 0 0 0 0 0 0 0 0 1 0 0 0.225 0.75 0.025 0 0 0.1499999999999999 0.8 0.05 0 0 0 0 1 0 0 0.05000000000000004 0.85 0.1</parameters>
+		</noisymax>
+		<cpt id="A3">
+			<state id="True" />
+			<state id="False" />
+			<parents>H3</parents>
+			<probabilities>0 1 0.015 0.985</probabilities>
+		</cpt>
+		<utility id="Shore">
+			<parents>A1</parents>
+			<utilities>100 0</utilities>
+		</utility>
+		<noisymax id="H7">
+			<state id="True" />
+			<state id="False" />
+			<parents>Altitude_setpoint Navigation_performance Loss_of_motion_performance</parents>
+			<strengths>2 1 0 0 1 2 0 1 2</strengths>
+			<parameters>1 0 0.6 0.4 0 1 0.2 0.8 0.09999999999999998 0.9 0 1 0.05000000000000004 0.95 0.02500000000000002 0.975 0 1 0.01000000000000001 0.99</parameters>
+		</noisymax>
+		<utility id="Copy_2_of_Mean_loss_for_assets">
+			<parents>C2</parents>
+			<utilities>0 400 800 8000 3000000</utilities>
+		</utility>
+		<utility id="Ship">
+			<parents>A2</parents>
+			<utilities>100 0</utilities>
+		</utility>
+		<noisymax id="C4">
+			<state id="Negligible" />
+			<state id="Marginal" />
+			<state id="Moderate" />
+			<state id="Critical" />
+			<state id="Catastrophic" />
+			<parents>A4 Recovery_effectiveness</parents>
+			<strengths>1 0 2 1 0</strengths>
+			<parameters>1 0 0 0 0 0 0 0 0 1 0 0 0.495 0.5 0.005 0 0 0.325 0.65 0.025 0 0 0 0 1 0 0 0.1499999999999999 0.8 0.05</parameters>
+		</noisymax>
+		<utility id="Copy_4_of_Mean_loss_for_assets">
+			<parents>C4</parents>
+			<utilities>0 400 800 8000 3000000</utilities>
+		</utility>
+		<cpt id="H8">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="A5">
+			<state id="True" />
+			<state id="False" />
+			<parents>Copy_3_of_Energy_system_integrity H7 H8</parents>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 0.5 0.5 0 1</probabilities>
+		</cpt>
+		<cpt id="C5">
+			<state id="Negligible" />
+			<state id="Marginal" />
+			<state id="Moderate" />
+			<state id="Critical" />
+			<state id="Catastrophic" />
+			<parents>A5</parents>
+			<probabilities>0 0 1 0 0 1 0 0 0 0</probabilities>
+		</cpt>
+		<utility id="Copy_5_of_Mean_loss_for_assets">
+			<parents>C5</parents>
+			<utilities>0 400 800 8000 3000000</utilities>
+		</utility>
+		<noisymax id="C3">
+			<state id="Negligible" />
+			<state id="Marginal" />
+			<state id="Moderate" />
+			<state id="Critical" />
+			<state id="Catastrophic" />
+			<parents>A3 Bathymetry_complexity Recovery_effectiveness</parents>
+			<strengths>1 0 2 1 0 2 1 0</strengths>
+			<parameters>1 0 0 0 0 0 0 0 0 1 0.01000000000000001 0.05000000000000004 0.15 0.7399999999999999 0.05 0 0 0.09999999999999998 0.8 0.1 0 0 0 0 1 0.05000000000000004 0.09999999999999998 0.25 0.5499999999999999 0.05 0 0 0.09999999999999998 0.8 0.1 0 0 0 0 1 0 0 0 0.8 0.2</parameters>
+		</noisymax>
+		<utility id="Copy_6_of_Mean_loss_for_assets">
+			<parents>C3</parents>
+			<utilities>0 400 800 8000 3000000</utilities>
+		</utility>
+		<mau id="Total_risk">
+			<parents>Copy_of_Mean_loss_for_assets Copy_2_of_Mean_loss_for_assets Copy_4_of_Mean_loss_for_assets Copy_6_of_Mean_loss_for_assets Copy_5_of_Mean_loss_for_assets</parents>
+			<weights>1 1 1 1 1</weights>
+		</mau>
+		<utility id="Seabed">
+			<parents>A3</parents>
+			<utilities>100 0</utilities>
+		</utility>
+		<utility id="Mission_abort">
+			<parents>A4</parents>
+			<utilities>100 0</utilities>
+		</utility>
+		<utility id="Payload">
+			<parents>A5</parents>
+			<utilities>100 0</utilities>
+		</utility>
+		<utility id="Copy_of_Shore">
+			<parents>Recovery_effectiveness</parents>
+			<utilities>1 0.5 0</utilities>
+		</utility>
+		<cpt id="Copy_of_Slope">
+			<state id="Severe" />
+			<state id="Moderate" />
+			<state id="Mild" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<noisymax id="samlenode">
+			<state id="Catastrophic" />
+			<state id="Critical" />
+			<state id="Moderate" />
+			<state id="Marginal" />
+			<state id="Negligible" />
+			<parents>C1 C2 C3 C4 C5</parents>
+			<strengths>4 3 2 1 0 4 3 2 1 0 4 3 2 1 0 4 3 2 1 0 4 3 2 1 0</strengths>
+			<parameters>1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1</parameters>
+		</noisymax>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.6518.0 ACADEMIC" name="Network1">
+			<node id="H2">
+				<name>H2: AUV does not maintain safe distance to ships</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>935 600 1093 698</position>
+				<barchart active="true" width="176" height="83" />
+			</node>
+			<node id="Recovery_effectiveness">
+				<name>SRIF5: Recovery effectiveness</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1936 729 2044 796</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Ruggedness">
+				<name>ERIF6: Seabed ruggedness</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1005 1021 1113 1088</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Slope">
+				<name>ERIF4: Seabed slope</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>789 957 897 1024</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="BPI">
+				<name>ERIF5: Broad position index (BPI)</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>872 1024 977 1089</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Bathymetry_complexity">
+				<name>ERIF3: Bathymetry complexity</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>941 937 1038 997</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Ship_traffic">
+				<name>ERIF2: Ship traffic density</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>839 789 940 852</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Metocean_conditions">
+				<name>ERIF11: Weather conditions</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1605 894 1713 961</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Wind_speed">
+				<name>ERIF12: Wind speed</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1491 1000 1579 1065</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Waves">
+				<name>ERIF16: Wave height</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1734 944 1842 1011</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Current">
+				<name>ERIF1: Ocean current speed</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1355 1019 1458 1083</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Human_operator_performance">
+				<name>SRIF6: Human operator performance</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1904 816 2006 879</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Vessel_type">
+				<name>SRIF9: Vessel type</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1949 930 2052 994</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Acoustic_modem">
+				<name>SRIF7: Communication link quality</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1785 881 1889 946</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Mission_duration">
+				<name>MRIF3: Mission duration</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1914 991 2002 1046</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Altitude_setpoint">
+				<name>MRIF1: Altitude setpoint</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>993 782 1081 837</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Distance_to_AUV">
+				<name>MRIF4: Distance from vessel to AUV</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2111 999 2216 1064</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Pop_up_frequency">
+				<name>MRIF6: AUV in surface</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>930 846 1027 906</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="C5">
+				<name>Payload data not obtained or obtained with insufficient quality</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1664 377 1799 461</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+			<node id="C2">
+				<name>Collision with ship</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1062 389 1175 459</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+			<node id="H8">
+				<name>H8: Object of interest (OOI) not at location</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1863 593 1988 672</position>
+				<barchart active="true" width="165" height="81" />
+			</node>
+			<node id="Depth">
+				<name>ERIF7: Seabed depth</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2024 885 2111 939</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="H3">
+				<name>H3: AUV does not maintain safe distance to seabed or other objects underwater</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1120 648 1283 749</position>
+				<barchart active="true" width="165" height="89" />
+			</node>
+			<node id="Speed_setpoint">
+				<name>MRIF2: Speed setpoint</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1246 922 1334 977</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="H6">
+				<name>H6: AUV is low on power</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1581 588 1720 674</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="H4">
+				<name>H4: AUV experiences problems diving/ascending</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1318 588 1449 669</position>
+				<barchart active="true" width="160" height="90" />
+			</node>
+			<node id="Salinity_of_water_column">
+				<name>ERIF9: Water density gradients</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1352 911 1461 968</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Rain">
+				<name>ERIF14: Rain</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1684 1045 1757 1090</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="River_mouth">
+				<name>ERIF10: Proximity to fresh water outlet</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1224 1013 1336 1083</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Fishing_area">
+				<name>ERIF8: Fishing activity</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1075 962 1161 1015</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Experience">
+				<name>SRIF8: Operator experience</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1803 999 1900 1059</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Visibility">
+				<name>ERIF13: Visibility</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1583 1006 1672 1061</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<textbox>
+				<caption>Classification of consequence severity for AUV operations (Chen et al., 2021):\n1) Catastrophic: AUV loss\n2) Critical: Severe damage, mission failure\n3) Moderate: Mitigatable damage, mission degraded, mission delayed\n4) Marginal: Minor damage\n5) Negligible: Minimal damage or no damage</caption>
+				<font color="000000" name="Arial" size="14" />
+				<position>597 55 1252 187</position>
+			</textbox>
+			<node id="Temperature">
+				<name>ERIF15: Ambient temperature</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1694 983 1793 1044</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Loss_of_motion_performance">
+				<name>SRIF1: Motion performance</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1237 836 1343 902</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Motion_capabilities">
+				<name>SRIF4: Motion capabilities</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1157 899 1254 959</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<textbox>
+				<caption>What is the consequence of these things going wrong?\n\n\n\n\n\nWhat can go wrong?\n(and how likely is it?)\n\n\n\n\nHow do do these things go wrong?</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>415 405 648 675</position>
+			</textbox>
+			<node id="Distance_to_shore">
+				<name>MRIF5: Distance to shore</name>
+				<interior color="ffe2c6" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>715 848 810 907</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="H1">
+				<name>H1: AUV does not maintain safe distance to shore</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>806 685 929 761</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="C4">
+				<name>Mission is aborted or failed</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1446 386 1559 456</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+			<node id="C1">
+				<name>Collition with shore</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>882 389 995 459</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+			<node id="Navigation_performance">
+				<name>SRIF3: Navigation performance</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1042 849 1144 912</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Copy_of_Navigation_performance">
+				<name>SRIF2: Situation awareness</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1138 773 1240 836</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="H7">
+				<name>H7: Insufficient quality of data</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1734 707 1847 777</position>
+				<barchart active="true" width="160" height="90" />
+			</node>
+			<node id="Copy_of_Energy_system_integrity">
+				<name>Propulsion system integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1308 719 1403 778</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Copy_2_of_Energy_system_integrity">
+				<name>Navigation sensors integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1334 777 1429 836</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Copy_4_of_Energy_system_integrity">
+				<name>Communication system integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1543 789 1652 857</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Copy_5_of_Energy_system_integrity">
+				<name>Detection system integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1564 724 1676 794</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Copy_3_of_Energy_system_integrity">
+				<name>Payload sensors integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1388 812 1477 867</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Total_risk">
+				<name>Total MEAN LOSS</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1317 144 1441 225</position>
+				<barchart active="true" width="167" height="62" />
+			</node>
+			<node id="A5">
+				<name>Payload data not obtained or obtained with insufficient quality</name>
+				<interior color="ff9900" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1664 492 1799 576</position>
+				<barchart active="true" width="198" height="62" />
+			</node>
+			<node id="A3">
+				<name>Collision with seabed or other object underwater</name>
+				<interior color="ff9900" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1192 500 1326 580</position>
+				<barchart active="true" width="157" height="59" />
+			</node>
+			<node id="A2">
+				<name>Collision with ship</name>
+				<interior color="ff9900" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1036 503 1149 573</position>
+				<barchart active="true" width="122" height="62" />
+			</node>
+			<node id="H5">
+				<name>H5: Loss of vehicle integrity</name>
+				<interior color="ffff99" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1430 694 1543 764</position>
+				<barchart active="true" width="168" height="59" />
+			</node>
+			<node id="A4">
+				<name>Mission is aborted by AUV</name>
+				<interior color="ff9900" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1442 500 1555 570</position>
+				<barchart active="true" width="157" height="60" />
+			</node>
+			<node id="A1">
+				<name>Collition with shore</name>
+				<interior color="ff9900" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>863 503 976 573</position>
+				<barchart active="true" width="122" height="62" />
+			</node>
+			<node id="Copy_6_of_Energy_system_integrity">
+				<name>Emergency system integrity</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1460 825 1555 884</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Copy_of_Mean_loss_for_assets">
+				<name>MEAN LOSS 1</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>870 262 994 343</position>
+				<barchart active="true" width="165" height="63" />
+			</node>
+			<node id="Copy_2_of_Mean_loss_for_assets">
+				<name>MEAN LOSS 2</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1052 260 1176 341</position>
+				<barchart active="true" width="156" height="64" />
+			</node>
+			<node id="Copy_4_of_Mean_loss_for_assets">
+				<name>MEAN LOSS 4</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1440 258 1564 339</position>
+				<barchart active="true" width="156" height="65" />
+			</node>
+			<node id="Copy_5_of_Mean_loss_for_assets">
+				<name>MEAN LOSS 5</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1660 258 1784 339</position>
+				<barchart active="true" width="161" height="62" />
+			</node>
+			<node id="C3">
+				<name>Collision with seabed or other object underwater</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1231 389 1347 461</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+			<node id="Copy_6_of_Mean_loss_for_assets">
+				<name>Copy of MEAN LOSS 3</name>
+				<interior color="993300" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1234 258 1358 339</position>
+				<barchart active="true" width="156" height="63" />
+			</node>
+			<node id="Shore">
+				<name>Shore</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>125 354 174 386</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Ship">
+				<name>Ship</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>131 428 172 460</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Seabed">
+				<name>Seabed</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>126 505 183 537</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Mission_abort">
+				<name>Mission abort</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>114 582 198 614</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Payload">
+				<name>Payload</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>127 656 185 688</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Copy_of_Shore">
+				<name>Copy of Shore</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2202 746 2251 778</position>
+				<barchart active="true" width="215" height="59" />
+			</node>
+			<node id="Copy_of_Slope">
+				<name>Copy of Seabed slope</name>
+				<interior color="ccffff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>445 938 523 986</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="samlenode">
+				<name>Copy of Payload data not obtained or obtained with insufficient quality</name>
+				<interior color="ff0000" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1936 291 2071 375</position>
+				<barchart active="true" width="140" height="108" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
